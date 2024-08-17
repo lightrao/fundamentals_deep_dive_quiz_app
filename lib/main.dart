@@ -2,9 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:fundamentals_deep_dive_quiz_app/start_screen.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     home: Scaffold(
-      body: StartScreen(),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.deepPurple, Colors.lightBlue],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: const StartScreen(),
+      ),
     ),
   ));
 }
