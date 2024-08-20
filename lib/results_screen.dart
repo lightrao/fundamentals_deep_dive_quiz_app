@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:fundamentals_deep_dive_quiz_app/data/questions.dart';
+import 'package:fundamentals_deep_dive_quiz_app/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({super.key, required this.chosenAnswers});
@@ -15,8 +16,8 @@ class ResultsScreen extends StatelessWidget {
         {
           'question_index': i,
           'question': questions[i].text,
-          'correct_anwser': questions[i].answers[0],
-          'user_anser': chosenAnswers[i],
+          'correct_answer': questions[i].answers[0],
+          'user_answer': chosenAnswers[i],
         },
       );
     }
@@ -33,7 +34,7 @@ class ResultsScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('You answered X out of Y questions correctly!'),
+            QuestionsSummary(getSummaryData()),
             const SizedBox(
               height: 30,
             ),
