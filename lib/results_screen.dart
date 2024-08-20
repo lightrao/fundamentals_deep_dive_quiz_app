@@ -34,11 +34,11 @@ class ResultsScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            QuestionsSummary(getSummaryData()),
+            const Text('You answered X out of Y questions correctly!'),
             const SizedBox(
               height: 30,
             ),
-            const Text('List of answers and questions...'),
+            QuestionsSummary(getSummaryData()),
             const SizedBox(
               height: 30,
             ),
