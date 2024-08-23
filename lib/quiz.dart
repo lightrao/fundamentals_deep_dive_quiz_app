@@ -14,6 +14,7 @@ class Quiz extends StatefulWidget {
   }
 }
 
+// private class because of leading underscore，it can see only in the current dart file
 class _QuizState extends State<Quiz> {
   List<String> selectedAnswers = [];
   var activeScreen = 'start-screen';
